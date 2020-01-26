@@ -59,8 +59,6 @@ console.log(getAddressesOfElements(Names));
 //5
 var Names = document.querySelectorAll(".sample_class_3");
 
-//console.log(Names);
-//console.log(Names[0].children);
 
 function getTagsOfElements(elements) {
     var arr = [];
