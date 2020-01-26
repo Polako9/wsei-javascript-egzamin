@@ -1,52 +1,73 @@
 //1
-var sc=document.getElementsByClassName("sample_class");
+var Names = document.getElementsByClassName("sample_class");
+console.log(Names);
 
-function getTagsOfElements(elements){
-    var array = [];
-
-    for(let i=0; i < elements.length; i++){
-        array.push(elements[i].tagName);
+function getTagsOfElements(elements) {
+    var arr = [];
+    for (let i = 0; i < elements.length; i++) {
+        arr.push(elements[i].tagName);
     }
-    return array;
-
+    return arr;
 }
-console.log (getTagsOfElements(sc));
+
+console.log(getTagsOfElements(Names));
 
 //2
-var sid = getElementsById("sample_id");
+var Names = document.getElementById("sample_id");
+console.log(Names.classList);
 
-console.log(sid.classList);
-
-function getClassesOfElements(element){
-    var array = [];
-
-    for(let i = 0; i < element.length; i++){
-        array.push(element[i]);
+function getClassesOfElement(elements) {
+    var arr = [];
+    for (let i = 0; i < elements.length; i++) {
+        arr.push(elements[i]);
     }
-    return array;
+    return arr;
 }
-console.log(getClassesOfElements(sid.className));
+
+console.log(getClassesOfElement(Names.classList));
+
 //3
-const liElements = document.querySelectorAll("sample_class_2 li");
+var Names = document.querySelectorAll(".sample_class_2 li");
 
-function getInnerTextsOfElements(elements){
-    const _elements = Array.from(elements);
-    const array = [];
-    console.log(_elements);
+console.log(Names);
 
-    _elements forEach(val =>{
-        array.push(val.textContent);
-    })
-    return array;
-
-    
+function getInnerTextsOfElements(elements) {
+    var arr = [];
+    for (let i = 0; i < elements.length; i++) {
+        arr.push(elements[i].textContent);
+    }
+    return arr;
 }
-console.log(getInnerTextsOfElements(liElements));
-//4
 
-const links = document.querySelectorAll("a");
+console.log(getInnerTextsOfElements(Names));
 
-function getAddressesOfElements(elements){
-    return Array.from(elements.map(el => al.array))
+//4 
+var Names = document.querySelectorAll("a");
+
+console.log(Names);
+
+function getAddressesOfElements(elements) {
+    var arr = [];
+    for (let i = 0; i < elements.length; i++) {
+        arr.push(elements[i].outerHTML);
+    }
+    return arr;
 }
+
+console.log(getAddressesOfElements(Names));
+
 //5
+var Names = document.querySelectorAll(".sample_class_3");
+
+//console.log(Names);
+//console.log(Names[0].children);
+
+function getTagsOfElements(elements) {
+    var arr = [];
+    for (let i = 0; i < elements.length; i++) {
+        arr.push(elements[i].tagName);
+    }
+    return arr;
+}
+
+console.log(getTagsOfElements(Names[0].children));
